@@ -1,0 +1,15 @@
+version: "3"
+services:
+  centos:
+    # 適宜変えること
+    container_name: "ryuou-proxy"
+    image: centos
+    tty: true
+    # 適宜変えること
+    ports:
+      - "127.0.0.1:8081:80"
+    privileged: true
+    command: /sbin/init
+    # 適宜変えること
+    volumes:
+      - "./centos/etc/nginx:/etc/nginx"

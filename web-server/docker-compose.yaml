@@ -1,0 +1,17 @@
+version: "3"
+services:
+  centos:
+    # 適宜変えること
+    container_name: "web-centos"
+    image: centos
+    tty: true
+    # 適宜変えること
+    ports:
+      - "127.0.0.1:8080:80"
+    privileged: true
+    command: /sbin/init
+    # 適宜変えること
+    volumes:
+      - "./centos/etc/httpd:/etc/httpd"
+      - "./centos/var/www:/var/www"
+      - "./files:/files"
