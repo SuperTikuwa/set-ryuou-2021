@@ -1,7 +1,7 @@
 D = "docker"
 DC = "docker-compose"
 # 適宜変えること
-CONTAINER = "ryuou-proxy"
+CONTAINER = "ryuou-dns"
 
 sh:
 	$(D) exec -it $(CONTAINER) bash
