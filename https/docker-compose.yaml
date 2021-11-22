@@ -1,0 +1,11 @@
+version: "3"
+services:
+  centos:
+    container_name: "https"
+    build: .
+    tty: true
+    ports:
+      - "127.0.0.1:80:80"
+      - "127.0.0.1:443:443"
+    privileged: true
+    command: /sbin/init

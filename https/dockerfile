@@ -1,0 +1,5 @@
+FROM centos
+
+RUN dnf update -y  \ 
+    && dnf -y install mod_ssl \
+    && systemctl start httpd
