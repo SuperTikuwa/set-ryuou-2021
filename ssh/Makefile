@@ -1,7 +1,7 @@
 D = "docker"
 DC = "docker-compose"
 # 適宜変えること
-CONTAINER = "isucon-centos"
+CONTAINER = "ryuou-ssh"
 
 sh:
 	$(D) exec -it $(CONTAINER) bash
