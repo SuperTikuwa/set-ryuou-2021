@@ -10,10 +10,8 @@ A くんは WordPressを使用してブログを書くことにしました．�
 - WordPressの環境構築には、Apache,PHP,MariaDBを使用してください.
 - WordPressは`https://ja.wordpress.org/download/`からwgetすることでダウンロードすることができます.
 - wordpress用のデータベースを作成してください.
-  時間経過で出すかも？
   `CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8;`
 - データベースのユーザー作成し権限を付与してください.
-  時間経過で出すかも？
   `GRANT ALL ON wordpress.* TO wordpress@localhost IDENTIFIED BY 'password';` 
   `FLUSH PRIVILEGES;`
 - `php-fpm.service`が起動に失敗している場合は`./etc/php-fpm.d/www.conf`をdockerコンテナ内の`/etc/php-fpm.d/www.conf`へコピーしてください.
@@ -25,7 +23,6 @@ A くんは WordPressを使用してブログを書くことにしました．�
 ## コマンド
 
 - `make up`
-
   - コンテナを起動します．はじめにこれを実行してください．
 
 - `make sh`
@@ -35,7 +32,6 @@ A くんは WordPressを使用してブログを書くことにしました．�
 
 - apache,php,mariadb,wordPress がインストールされているか？
 - `http://localhost:8000/wordpress`にアクセスできるか？
-- php-fpm.serviceが起動できているか？（docker側の問題なので採点対象にしなくても良いかも）
 - ユーザーを作成できるか？
 - 作成したユーザーでログインできるか？
 - 記事を投稿できているか？
