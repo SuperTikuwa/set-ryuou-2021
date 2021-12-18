@@ -10,6 +10,4 @@ services:
       - "127.0.0.1:8081:80"
     privileged: true
     command: /sbin/init
-    # 適宜変えること
-    volumes:
-      - "./centos/etc/nginx:/etc/nginx"
+

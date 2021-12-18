@@ -12,6 +12,4 @@ services:
     command: /sbin/init
     # 適宜変えること
     volumes:
-      - "./centos/etc/httpd:/etc/httpd"
-      - "./centos/var/www:/var/www"
       - "./files:/files"
